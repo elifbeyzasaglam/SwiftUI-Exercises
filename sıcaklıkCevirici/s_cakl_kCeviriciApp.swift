@@ -11,7 +11,25 @@ import SwiftUI
 struct s_cakl_kCeviriciApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView{
+                ContentView()
+                    .tabItem {
+                        HStack{
+                            Image(systemName: "thermometer.medium")
+                            Text("TAB_CONVERSİON")
+                        }
+                    }
+                MapView()
+                    .tabItem {
+                        HStack{
+                            Image(systemName: "map")
+                            Text("TAB_MAP")
+                            
+                        }
+                    }
+            }
+            .accentColor(.purple)
+            
         }
     }
 }
